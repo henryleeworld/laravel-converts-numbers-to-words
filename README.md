@@ -1,6 +1,6 @@
-# Laravel 10 將數字轉換成文字
+# Laravel 11 將數字轉換成文字
 
-引入 rmunate 的 spell-number 套件來擴增將數字轉換成文字，這可能是相當實用，例如，將元和分金額轉換成文字。
+將數字轉換成文字，這可能是相當實用，可以根據當前語系（全域或依據方法）設定數字格式。
 
 ## 使用方式
 - 打開 php.ini 檔案，啟用 PHP 擴充模組 intl，並重啟服務器。
@@ -23,5 +23,5 @@ $ php artisan key:generate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/hLPoNdq.png)
+![](https://i.imgur.com/A8GE1r1.png)
 > 各國的數字單位用法不盡相同

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Rmunate\Utilities\SpellNumber;
+use Illuminate\Support\Number;
 
 class NumbersController extends Controller
 {
@@ -12,8 +12,8 @@ class NumbersController extends Controller
         $integer = random_int(100000000, 200000000);
         $float = round((mt_rand() / mt_getrandmax()), 2);
         $amount = $integer + $float;
-        echo '整數：' . $integer . '，轉換成英文說法為：' . SpellNumber::value($integer)->locale($locale)->toLetters() . PHP_EOL;
-        echo '浮點數：' . $float . '，轉換成英文說法為：' . SpellNumber::value($float)->locale($locale)->toLetters() . PHP_EOL;
-        echo '金額：' . $amount . '，轉換成英文金融說法為：' . SpellNumber::value($amount)->locale($locale)->currency('Dollars')->fraction('cents')->toMoney() . PHP_EOL;
+        echo __('The integer :integer is converted into English as: ', ['integer' => $integer]) . Number::spell($integer, locale: $locale) . PHP_EOL;
+        echo __('The floating number :float is converted into English as: ', ['float' => $float]) . Number::spell($float, locale: $locale) . PHP_EOL;
+        echo __('The amount of :amount converted into US dollars is: ', ['amount' => $amount]) . Number::currency($amount, in: 'USD', locale: $locale) . PHP_EOL;
     }
 }
