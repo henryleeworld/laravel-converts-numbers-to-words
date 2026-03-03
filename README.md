@@ -1,4 +1,4 @@
-# Laravel 11 將數字轉換成文字
+# Laravel 12 將數字轉換成文字
 
 將數字轉換成文字，這可能是相當實用，可以根據當前語系（全域或依據方法）設定數字格式。
 
@@ -17,11 +17,15 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
+```sh
+$ php artisan migrate
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/numbers/convert` 來進行數字轉換成文字。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/A8GE1r1.png)
+![](https://i.imgur.com/qORmR9H.png)
 > 各國的數字單位用法不盡相同
